@@ -32,7 +32,7 @@
     DECLARE_APPLET( 24, 0x02, CVRecV2), \
     DECLARE_APPLET( 55, 0x80, DrCrusher), \
     DECLARE_APPLET(  9, 0x08, DualQuant), \
-    DECLARE_APPLET( 58, 0x08, DualQuant2), \
+    DECLARE_APPLET( 58, 0x08, DualScale), \
     DECLARE_APPLET( 45, 0x02, EnigmaJr), \
     DECLARE_APPLET( 42, 0x11, EnvFollow), \
     DECLARE_APPLET( 29, 0x04, GateDelay), \

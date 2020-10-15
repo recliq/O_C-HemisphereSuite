@@ -24,11 +24,11 @@
 #include "braids_quantizer_scales.h"
 #include "OC_scales.h"
 
-class DualQuant2 : public HemisphereApplet {
+class DualScale : public HemisphereApplet {
 public:
 
     const char* applet_name() {
-        return "DualQuant2";
+        return "DualScale";
     }
 
     void Start() {
@@ -162,36 +162,36 @@ private:
 ///  should prefer to handle things in the HemisphereApplet child class
 ///  above.
 ////////////////////////////////////////////////////////////////////////////////
-DualQuant2 DualQuant2_instance[2];
+DualScale DualScale_instance[2];
 
-void DualQuant2_Start(bool hemisphere) {
-    DualQuant2_instance[hemisphere].BaseStart(hemisphere);
+void DualScale_Start(bool hemisphere) {
+    DualScale_instance[hemisphere].BaseStart(hemisphere);
 }
 
-void DualQuant2_Controller(bool hemisphere, bool forwarding) {
-    DualQuant2_instance[hemisphere].BaseController(forwarding);
+void DualScale_Controller(bool hemisphere, bool forwarding) {
+    DualScale_instance[hemisphere].BaseController(forwarding);
 }
 
-void DualQuant2_View(bool hemisphere) {
-    DualQuant2_instance[hemisphere].BaseView();
+void DualScale_View(bool hemisphere) {
+    DualScale_instance[hemisphere].BaseView();
 }
 
-void DualQuant2_OnButtonPress(bool hemisphere) {
-    DualQuant2_instance[hemisphere].OnButtonPress();
+void DualScale_OnButtonPress(bool hemisphere) {
+    DualScale_instance[hemisphere].OnButtonPress();
 }
 
-void DualQuant2_OnEncoderMove(bool hemisphere, int direction) {
-    DualQuant2_instance[hemisphere].OnEncoderMove(direction);
+void DualScale_OnEncoderMove(bool hemisphere, int direction) {
+    DualScale_instance[hemisphere].OnEncoderMove(direction);
 }
 
-void DualQuant2_ToggleHelpScreen(bool hemisphere) {
-    DualQuant2_instance[hemisphere].HelpScreen();
+void DualScale_ToggleHelpScreen(bool hemisphere) {
+    DualScale_instance[hemisphere].HelpScreen();
 }
 
-uint32_t DualQuant2_OnDataRequest(bool hemisphere) {
-    return DualQuant2_instance[hemisphere].OnDataRequest();
+uint32_t DualScale_OnDataRequest(bool hemisphere) {
+    return DualScale_instance[hemisphere].OnDataRequest();
 }
 
-void DualQuant2_OnDataReceive(bool hemisphere, uint32_t data) {
-    DualQuant2_instance[hemisphere].OnDataReceive(data);
+void DualScale_OnDataReceive(bool hemisphere, uint32_t data) {
+    DualScale_instance[hemisphere].OnDataReceive(data);
 }
